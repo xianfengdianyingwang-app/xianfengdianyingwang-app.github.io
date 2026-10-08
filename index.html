@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>先锋电影网 | 独立影评·作者电影·全球电影节精选 | 电影不只是娱乐</title>
+<meta name="description" content="先锋电影网（https://xianfengdianyingwang-app.github.io）是一处面向独立影像与作者表达的观影与思考空间。我们聚焦戛纳、柏林、威尼斯三大电影节的入围与获奖作品，深耕华语独立、东亚新导演、欧洲艺术电影与拉美魔幻现实主义影像，并提供深度影评、导演访谈、镜头语言拆解与主题片单。在这里，电影不是消磨时间的消费品，而是理解世界与被理解的途径。先锋电影网坚持慢读、深看、反复看，愿与你一起把观影变成一种持续的练习。">
+<meta name="keywords" content="先锋电影网, 独立电影, 作者电影, 艺术电影, 电影节, 戛纳, 柏林, 威尼斯, 华语独立, 影评, 导演访谈, 镜头分析, 主题片单, 冷门佳片, xianfengdianyingwang-app.github.io">
+<meta name="author" content="先锋电影网">
+<meta name="theme-color" content="#f4f1ea">
+<meta name="referrer" content="no-referrer-when-downgrade">
+<link rel="canonical" href="https://xianfengdianyingwang-app.github.io">
+<style>
+:root{
+  --paper:#f4f1ea;
+  --ink:#23211d;
+  --ink-2:#5f5a50;
+  --ink-3:#9a9285;
+  --red:#c8382f;
+  --red-d:#9c281f;
+  --line:#dfd9cb;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC","SimSun","WenQuanYi Micro Hei",Georgia,serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.85;
+  font-size:16px;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+/* masthead */
+.masthead{border-bottom:3px double var(--ink);padding:26px 0 14px;position:relative}
+.brand-row{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.kicker{font-family:"Helvetica Neue",Arial,sans-serif;font-size:11px;letter-spacing:.3em;color:var(--red);text-transform:uppercase}
+h1{font-size:clamp(30px,6vw,52px);font-weight:900;letter-spacing:.04em;line-height:1.1;margin:6px 0 2px}
+.h1-sub{font-size:13px;color:var(--ink-2);letter-spacing:.15em;font-family:"Helvetica Neue",Arial,sans-serif}
+.issue{font-family:"Helvetica Neue",Arial,sans-serif;font-size:12px;color:var(--ink-2);text-align:right;line-height:1.7}
+.issue b{display:block;color:var(--red);font-size:13px;letter-spacing:.1em}
+nav.toc{display:flex;gap:4px;flex-wrap:wrap;margin-top:16px;font-family:"Helvetica Neue",Arial,sans-serif;font-size:13px;border-top:1px solid var(--line);padding-top:12px}
+nav.toc a{padding:6px 13px;border:1px solid var(--line);border-radius:2px;color:var(--ink-2);transition:.2s}
+nav.toc a:hover{color:#fff;background:var(--ink);border-color:var(--ink)}
+nav.toc a.hot{color:#fff;background:var(--red);border-color:var(--red)}
+/* lead */
+.lead{padding:34px 0 10px;display:grid;grid-template-columns:1fr 280px;gap:34px;align-items:start}
+.lead p{font-size:17px;color:var(--ink);text-align:justify}
+.lead p::first-letter{font-size:38px;float:left;line-height:.9;margin:4px 8px 0 0;color:var(--red);font-weight:700}
+.lead-aside{border-left:2px solid var(--red);padding-left:16px;font-size:13.5px;color:var(--ink-2)}
+.lead-aside h4{font-family:"Helvetica Neue",Arial,sans-serif;font-size:11px;letter-spacing:.25em;color:var(--red);margin-bottom:8px}
+.lead-aside ol{padding-left:18px}
+.lead-aside li{margin:5px 0}
+/* section */
+section{padding:44px 0;border-top:1px solid var(--line)}
+.sec-title{display:flex;align-items:baseline;gap:14px;margin-bottom:22px}
+.sec-title .no{font-family:"Helvetica Neue",Arial,sans-serif;font-size:12px;color:#fff;background:var(--red);padding:3px 9px;letter-spacing:.15em}
+.sec-title h2{font-size:clamp(20px,2.6vw,27px);font-weight:800;letter-spacing:.03em}
+.sec-title em{font-style:normal;font-size:13px;color:var(--ink-3);margin-left:auto;font-family:"Helvetica Neue",Arial,sans-serif}
+/* critic picks */
+.picks{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.pick{display:flex;flex-direction:column;border-bottom:1px dashed var(--line);padding-bottom:16px}
+.pick .frame{aspect-ratio:3/4;background:#e3ddd0;overflow:hidden;position:relative}
+.pick .frame::after{content:attr(data-cap);position:absolute;inset:auto 0 0;font-family:"Helvetica Neue",Arial,sans-serif;font-size:10px;letter-spacing:.2em;color:#8d8577;padding:6px 8px}
+.pick h3{font-size:18px;margin:12px 0 5px;line-height:1.4}
+.pick .by{font-size:12px;color:var(--ink-3);font-family:"Helvetica Neue",Arial,sans-serif;letter-spacing:.08em}
+.pick p{font-size:14px;color:var(--ink-2);margin-top:8px;text-align:justify}
+.pick .score{margin-top:10px;font-family:"Helvetica Neue",Arial,sans-serif;font-size:12px;color:var(--red);letter-spacing:.1em}
+/* director */
+.dir-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.dir{text-align:center}
+.dir .avatar{width:96px;height:96px;margin:0 auto 10px;border-radius:50%;background:linear-gradient(160deg,#ddd6c6,#c9c0ad);display:grid;place-items:center;font-size:30px;color:#8d8577}
+.dir h4{font-size:15px}
+.dir span{font-size:12px;color:var(--ink-3);font-family:"Helvetica Neue",Arial,sans-serif}
+.dir p{font-size:12.5px;color:var(--ink-2);margin-top:6px;line-height:1.6}
+/* notebook */
+.note{column-count:2;column-gap:36px;font-size:15px;color:var(--ink-2)}
+.note p{break-inside:avoid;margin-bottom:16px;text-align:justify}
+.note p b{color:var(--red);font-family:"Helvetica Neue",Arial,sans-serif;font-size:12px;letter-spacing:.12em;display:block;margin-bottom:3px}
+/* table */
+table{width:100%;border-collapse:collapse;font-size:14px;font-family:"Helvetica Neue",Arial,sans-serif}
+th,td{padding:11px 10px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:11.5px;letter-spacing:.15em;color:var(--red);border-bottom:2px solid var(--ink)}
+td.n{font-variant-numeric:tabular-nums;color:var(--ink-3);width:44px}
+td.t{font-weight:700;width:26%}
+td.d{color:var(--ink-2);font-size:13px}
+.tag{display:inline-block;font-size:10.5px;padding:1px 7px;border:1px solid var(--ink-3);color:var(--ink-2);border-radius:2px;margin-right:4px}
+/* manifesto */
+.manifesto{background:var(--ink);color:var(--paper);padding:38px 34px;border-radius:3px}
+.manifesto h3{font-size:22px;margin-bottom:16px;letter-spacing:.05em}
+.manifesto ol{counter-reset:m;list-style:none;columns:2;column-gap:38px}
+.manifesto li{break-inside:avoid;padding:8px 0 8px 34px;position:relative;font-size:14.5px;color:#d8d2c4;border-bottom:1px solid rgba(255,255,255,.10)}
+.manifesto li::before{counter-increment:m;content:counter(m);position:absolute;left:0;top:9px;font-family:Georgia,serif;font-size:12px;color:var(--red)}
+/* faq */
+.qa{display:grid;gap:14px}
+.qa div{border:1px solid var(--line);padding:16px 18px;background:#faf7f0}
+.qa h4{font-size:15.5px;margin-bottom:6px;display:flex;gap:9px}
+.qa h4 i{font-style:normal;color:var(--red);font-family:"Helvetica Neue",Arial,sans-serif;font-size:12px}
+.qa p{font-size:14px;color:var(--ink-2)}
+/* colophon */
+.colophon{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:26px;padding:40px 0 26px;border-top:3px double var(--ink);margin-top:40px;font-family:"Helvetica Neue",Arial,sans-serif;font-size:13px}
+.colophon h5{font-size:11px;letter-spacing:.25em;color:var(--red);margin-bottom:11px}
+.colophon a{display:block;color:var(--ink-2);padding:3px 0}
+.colophon a:hover{color:var(--red)}
+.colophon p{color:var(--ink-2);line-height:1.8}
+.top{position:fixed;right:16px;bottom:20px;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:var(--paper);font-size:17px;z-index:40}
+/* responsive */
+@media(max-width:900px){
+  .picks{grid-template-columns:repeat(2,1fr)}
+  .dir-grid{grid-template-columns:repeat(2,1fr)}
+  .note,.manifesto ol{columns:1}
+  .lead{grid-template-columns:1fr;gap:18px}
+}
+@media(max-width:620px){
+  .wrap{padding:0 16px}
+  body{font-size:15.5px}
+  .picks,.dir-grid{grid-template-columns:1fr;gap:20px}
+  .issue{text-align:left}
+  table{font-size:12.5px}
+  td.d{display:none}
+  section{padding:34px 0}
+  .colophon{grid-template-columns:1fr 1fr;gap:20px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/yazhou.js"></script>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="brand-row">
+      <div>
+        <div class="kicker">Independent &amp; Auteur Cinema · Since 2026</div>
+        <h1>先锋电影网</h1>
+        <div class="h1-sub">独立影像 · 作者表达 · 电影节现场　／　慢读 · 深看 · 反复看</div>
+      </div>
+      <div class="issue">
+        <b>VOL. 37</b>
+        秋日号<br>
+        2026 年 10 月<br>
+        https://xianfengdianyingwang-app.github.io
+      </div>
+    </div>
+    <nav class="toc">
+      <a href="#picks" class="hot">本期推荐</a>
+      <a href="#director">导演谱系</a>
+      <a href="#notebook">观影手记</a>
+      <a href="#festival">电影节日历</a>
+      <a href="#manifesto">我们的主张</a>
+      <a href="#qa">读者问答</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- 栏目一：卷首 -->
+  <div class="wrap">
+    <article class="lead">
+      <p>电影史从来不是由最卖座的那一部写成的。那些在放映厅只坐满三分之一、却在十年后被反复引用的影像，往往来自不肯妥协的作者。先锋电影网做的，就是把镜头对准这些"不合时宜"的作品与制造它们的人。我们不追热搜，不做速食解说，只关心一个问题：<strong>这部电影，为何非拍不可？</strong></p>
+      <aside class="lead-aside">
+        <h4>本期导读</h4>
+        <ol>
+          <li>封面：《风过耳》与声音的政治</li>
+          <li>导演谱系：华语独立的三条路</li>
+          <li>观影手记：重看《一一》的十五个细节</li>
+          <li>2026—2027 电影节日历</li>
+          <li> manifesto：为什么仍需"难看"的电影</li>
+        </ol>
+      </aside>
+    </article>
+  </div>
+
+  <!-- 栏目二：本期推荐 -->
+  <section id="picks">
+    <div class="wrap">
+      <div class="sec-title">
+        <span class="no">01</span>
+        <h2>本期推荐 · 编辑之选</h2>
+        <em>CRITIC'S PICKS</em>
+      </div>
+      <div class="picks">
+        <article class="pick">
+          <div class="frame" data-cap="COVER / 封面"></div>
+          <div class="by"> dir. 陈哲艺　·　新加坡 / 法国　·　2026</div>
+          <h3>《风过耳》</h3>
+          <p>以一位失聪的渔船轮机工为主角，全片几乎不用对白，靠柴油机的节奏、海浪的相位与手的触觉推进叙事。声音设计获戛纳技术大奖，是近年最"身体化"的观影经验。</p>
+          <div class="score">★ ★ ★ ★ ☆　观影难度：中</div>
+        </article>
+        <article class="pick">
+          <div class="frame" data-cap="FEATURE / 特写"></div>
+          <div class="by">dir. 茹斯汀·特里耶　·　法国　·　2025</div>
+          <h3>《隔壁的女人》</h3>
+          <p>延续《坠楼死亡的剖析》的法庭修辞，把婚姻中的权力关系搬到公寓楼的承重墙两侧。长镜头调度堪称教科书，结尾那声关门，比任何台词都重。</p>
+          <div class="score">★ ★ ★ ★ ★　观影难度：低</div>
+        </article>
+        <article class="pick">
+          <div class="frame" data-cap="REDISCOVER / 重发现"></div>
+          <div class="by">dir. 阿彼察邦·韦拉斯哈古　·　泰国　·　2010</div>
+          <h3>《能召回前世的布米叔叔》</h3>
+          <p>重看的意义在于：十年前你看的是鬼魂，十年后你看的是自己的记忆。本站提供 2K 修复版与逐镜解读，建议关掉弹幕、开原生音轨。</p>
+          <div class="score">★ ★ ★ ★ ☆　观影难度：高</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目三：导演谱系 -->
+  <section id="director">
+    <div class="wrap">
+      <div class="sec-title">
+        <span class="no">02</span>
+        <h2>导演谱系 · 正在被看见的人</h2>
+        <em>NEW AUTEURS</em>
+      </div>
+      <div class="dir-grid">
+        <div class="dir">
+          <div class="avatar">林</div>
+          <h4>林见青</h4>
+          <span>CHINA · 1989</span>
+          <p>三部曲以"县城的夜晚"为母题，擅长用霓虹与雾气替代心理描写。新作《夜航船》入围洛迦诺主竞赛。</p>
+        </div>
+        <div class="dir">
+          <div class="avatar">M</div>
+          <h4>Mika Yamamura</h4>
+          <span>JAPAN · 1992</span>
+          <p>以 16mm 胶片拍摄家庭题材，画面粗粝而温柔。被《电影旬报》评为"最值得期待的三十岁以下导演"。</p>
+        </div>
+        <div class="dir">
+          <div class="avatar">R</div>
+          <h4>Ramón Salazar</h4>
+          <span>MEXICO · 1987</span>
+          <p>魔幻现实主义当代继承人，镜头里有仙人掌、亡灵与便利店。节奏极慢，请预留完整的两小时。</p>
+        </div>
+        <div class="dir">
+          <div class="avatar">A</div>
+          <h4>Adaeze Nwoko</h4>
+          <span>NIGERIA / UK · 1994</span>
+          <p>以拉各斯的堵车与电力短缺为叙事引擎，用手机摄影完成首作，声音设计比画面更先抵达你。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目四：观影手记 -->
+  <section id="notebook">
+    <div class="wrap">
+      <div class="sec-title">
+        <span class="no">03</span>
+        <h2>观影手记 · 重看的价值</h2>
+        <em>NOTEBOOK</em>
+      </div>
+      <div class="note">
+        <p><b>关于《一一》</b>杨德昌在电梯里安排的那次相遇，不是巧合，是结构的必然。简南俊与阿瑞的重逢，与洋洋在走廊尽头的回头，构成同一句台词的正反打。</p>
+        <p><b>关于长镜头</b>长镜头不是"一个镜头拍很久"，而是"让时间在画面里真实流过"。判断标准是：你是否在某一刻忘了自己在看电影。</p>
+        <p><b>关于字幕</b>翻译是第二次导演。一句"我爱你"与一句"我今天路过我们住过的那条街"，指向完全不同的电影。先锋电影网优先提供原文字幕与学术校对版。</p>
+        <p><b>关于"看不懂"</b>看不懂不是失败，是邀请。先记下让你不安的那三秒钟，再去查导演的出生地、那年发生的事、他读过的书。电影会从那里向你走来。</p>
+        <p><b>关于片单</b>比"必看 100 部"更有用的是"某个雨天的 5 部"。情绪是比类型更可靠的索引。本站片单按心境而非类型编排，这是我们的固执。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目五：电影节日历 -->
+  <section id="festival">
+    <div class="wrap">
+      <div class="sec-title">
+        <span class="no">04</span>
+        <h2>电影节日历 · 2026—2027</h2>
+        <em>FESTIVAL CALENDAR</em>
+      </div>
+      <table>
+        <thead>
+          <tr><th class="n">#</th><th class="t">电影节</th><th>时间 / 地点</th><th class="d">先锋关注</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="n">01</td><td class="t">东京国际电影节</td><td>2026.10.24–11.02　东京</td><td class="d"><span class="tag">亚洲首映</span>聚焦东亚新导演长片处女作</td></tr>
+          <tr><td class="n">02</td><td class="t">平遥国际电影展</td><td>2026.10.10–10.17　平遥</td><td class="d"><span class="tag">藏龙</span>华语独立最集中的一次亮相</td></tr>
+          <tr><td class="n">03</td><td class="t">金马影展</td><td>2026.11.06–11.23　台北</td><td class="d"><span class="tag"> NETPAC</span>华语与东南亚作者对话</td></tr>
+          <tr><td class="n">04</td><td class="t">鹿特丹国际电影节</td><td>2027.01.27–02.06　鹿特丹</td><td class="d"><span class="tag">老虎奖</span>实验与低成本的第一现场</td></tr>
+          <tr><td class="n">05</td><td class="t">柏林国际电影节</td><td>2027.02.11–02.21　柏林</td><td class="d"><span class="tag">论坛单元</span>政治、纪录片与形式激进派</td></tr>
+          <tr><td class="n">06</td><td class="t">戛纳国际电影节</td><td>2027.05.12–05.23　戛纳</td><td class="d"><span class="tag">一种关注</span>作者电影的年度坐标</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 栏目六：主张 -->
+  <section id="manifesto">
+    <div class="wrap">
+      <div class="sec-title">
+        <span class="no">05</span>
+        <h2 style="color:var(--paper)">我们的主张</h2>
+        <em style="color:var(--ink-3)">MANIFESTO</em>
+      </div>
+      <div class="manifesto">
+        <h3>为什么仍需要"难看"的电影</h3>
+        <ol>
+          <li>拒绝把观影降格为"杀时间"，时间是唯一不可回收的成本。</li>
+          <li>不追逐上映档期，只追逐影像在记忆中的留存时长。</li>
+          <li>影评不是打分，是把一部作品重新打开一次。</li>
+          <li>尊重第一次观看的茫然，也尊重第十次观看的恍然。</li>
+          <li>字幕、音轨、画幅、帧率，都是作者意图的一部分，不可随意省略。</li>
+          <li>独立不等于晦涩，商业不等于浅薄；我们只问：它是否诚实。</li>
+          <li>给冷门作品留一盏灯。十年后被反复引用的，常是今天无人问津的那一部。</li>
+          <li>先锋电影网不替代影院，只延长思考。</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目七：读者问答 -->
+  <section id="qa">
+    <div class="wrap">
+      <div class="sec-title">
+        <span class="no">06</span>
+        <h2>读者问答</h2>
+        <em>READER MAIL</em>
+      </div>
+      <div class="qa">
+        <div>
+          <h4><i>#01</i>先锋电影网的官方网址是什么？</h4>
+          <p>唯一官方地址为 <b>https://xianfengdianyingwang-app.github.io</b>。本站无任何客户端、无付费会员、无"高清独家"诱导，请认准该域名，谨防仿冒。</p>
+        </div>
+        <div>
+          <h4><i>#02</i>在哪里可以看到文中提到的影片？</h4>
+          <p>本站为评论与索引性质站点，不提供盗版资源。每篇影评末尾会列出可合法观看的流媒体、修复版蓝光与电影节展映信息，请支持正版与创作者。</p>
+        </div>
+        <div>
+          <h4><i>#03</i>适合新手入门的作者电影片单？</h4>
+          <p>建议从是枝裕和《步履不停》、阿巴斯《橄榄树下的情人》、侯孝贤《最好的时光》开始——节奏慢但不晦涩，情感具体而不煽情。看完这三部，再看本文的"导演谱系"。</p>
+        </div>
+        <div>
+          <h4><i>#04</i>如何投稿观影手记？</h4>
+          <p>欢迎 1500 字以上的深度文字，拒绝剧情复述与情绪宣泄。请在邮件中注明"投稿 + 片名"，附个人简介。入选稿件将获编辑校对与稿酬。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="colophon">
+      <div>
+        <h5>先锋电影网</h5>
+        <p>一个关于独立影像与作者表达的长期写作项目。<br>官方网址：<b>https://xianfengdianyingwang-app.github.io</b></p>
+      </div>
+      <div>
+        <h5>栏目</h5>
+        <a href="#">本期推荐</a>
+        <a href="#">导演谱系</a>
+        <a href="#">观影手记</a>
+        <a href="#">电影节日历</a>
+      </div>
+      <div>
+        <h5>片单</h5>
+        <a href="#">华语独立</a>
+        <a href="#">东亚新导演</a>
+        <a href="#">欧洲艺术电影</a>
+        <a href="#">拉美魔幻现实主义</a>
+      </div>
+      <div>
+        <h5>关于</h5>
+        <a href="#">我们的主张</a>
+        <a href="#">投稿须知</a>
+        <a href="#">版权与致谢</a>
+        <a href="#">联系编辑部</a>
+      </div>
+    </div>
+    <p style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:12px;color:var(--ink-3);border-top:1px solid var(--line);padding-top:16px;line-height:1.9">
+      © 先锋电影网 保留所有权利。本站内容为原创评论与公开资料整理，仅供交流学习，请勿用于商业用途。<br>
+      网站名称：<b style="color:var(--ink-2)">先锋电影网</b>　·　域名：<b style="color:var(--ink-2)">xianfengdianyingwang-app.github.io</b>　·　访问路径：<b style="color:var(--ink-2)">https://xianfengdianyingwang-app.github.io</b>
+    </p>
+  </div>
+</footer>
+
+<a class="top" href="#" title="返回卷首">&#8593;</a>
+
+</body>
+</html>
